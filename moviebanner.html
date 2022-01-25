@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie APP</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/moviebanner.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body onload="get()">
+    <div class="header">
+      <nav class="nav" id="nav">
+        <div class="leftnav">
+          <div class="logo">
+            <img src="image/logo.jpg" />
+          </div>
+          <div class="list">
+            <div>Movies</div>
+            <div>TV Shows</div>
+            <div>People</div>
+            <div>More</div>
+          </div>
+        </div>
+        <div class="rightnav">
+          <div class="menuicon">
+            <div></div>
+            <div class="menuiconline2"></div>
+            <div></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="notrailer" class="notrailer"></div>
+    <div class="background" id="background">
+      <img src="" id="backgroundimage" alt="" />
+      <div class="backgroundoverlay" id="overlay"></div>
+      <div class="moviedata" id="moviedata">
+        <div class="posterimg">
+          <img src="image/back.jpg" id="posterimg" />
+        </div>
+        <div class="movieinfo" id="movieinfo">
+          <div class="movieinfo1">
+            <div id="title"></div>
+            <div id="genre"></div>
+          </div>
+          <div class="movieinfo2">
+            <div class="userscore">
+              <div class="chart" data-percent="73" id="chart">
+                <span id="chartvalue"> </span>
+              </div>
+              <span>User Score</span>
+            </div>
+            <div class="addtolist"><i class="fa fa-list"></i></div>
+            <div class="favourite"><i class="fa fa-heart"></i></div>
+            <div class="watchlist"><i class="fa fa-bookmark"></i></div>
+            <a
+              href="#trailerbox"
+              style="text-decoration: none; color: white"
+              id="trailerbutton"
+            >
+              <div class="playtrailer" onClick="showtrailer()">
+                <i class="fa fa-play"></i> <span>Play Trailer</span>
+              </div>
+            </a>
+          </div>
+          <div class="movieinfo3">
+            <div id="tagline"></div>
+            <div class="overview">
+              <div class="overviewheading">Overview</div>
+              <div id="overviewinfo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trailer" id="trailerbox">
+      <span class="closebutton">
+        <a href="#nav" style="text-decoration: none; color: white">
+          <button onClick="hidetrailer()">
+            <i class="fa fa-close"></i>&nbsp;Close
+          </button></a
+        >
+      </span>
+      <iframe
+        height="100vh"
+        width="90%"
+        src=""
+        id="trailer"
+        allow="autoplay; encrypted-media"
+      >
+      </iframe>
+    </div>
+
+    <footer>
+      <div class="footer">
+        <div>The Movie database</div>
+        <div>&copy;&nbsp;Made with ❤️</div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <script src="node_modules/colorthief/dist/color-thief.umd.js"></script>
+    <script src="js\movibanner.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js\piechart.js"></script>
+  </body>
+</html>
